@@ -1,6 +1,6 @@
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 const RootLayout = ({ children }) => {
   return (
