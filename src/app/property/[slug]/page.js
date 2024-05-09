@@ -2,6 +2,7 @@ import ImageCard from "../../components/ImageCard";
 import Link from "next/link";
 import dotenv from "dotenv";
 import { query } from "express";
+import Navbar from "@/app/components/Navbar";
 dotenv.config();
 
 const getProperty = async (slug) => {
@@ -65,23 +66,27 @@ const Property = async ({ params }) => {
   if (property === null) {
   }
   return (
-    <div className="property">
-      <div className="property-image-container">
-        {property.images.map((image) => (
-          <ImageCard
-            key={image.id}
-            url={image.url}
-            fileName={image.fileName}
-            width={500}
-            height={300}
-          />
-        ))}
+    <>
+      <Navbar />
+      <div className="property">
+        <div className="property-image-container">
+          {property.images.map((image) => (
+            <ImageCard
+              key={image.id}
+              url={image.url}
+              fileName={image.fileName}
+              width={500}
+              height={300}
+            />
+          ))}
+        </div>
         <div className="property-info-container">
           <h1>{property.name}</h1>
           <h2>
             <span>{property.bedrooms} Bedrooms</span>
             <br />
-            <span>Price: {property.rentalPrice} </span>{" "}
+            <br />
+            <span>Price: ${property.rentalPrice} /month</span>{" "}
           </h2>
           <br />
           <h2>Overview</h2>
@@ -105,7 +110,7 @@ const Property = async ({ params }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
