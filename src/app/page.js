@@ -43,7 +43,7 @@ const getProperties = async () => {
 
 const Home = async () => {
   const properties = await getProperties();
-  console.log("properties :>> ", properties);
+  // console.log("properties :>> ", properties);
   return (
     <>
       <Navbar />
