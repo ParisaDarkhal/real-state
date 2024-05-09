@@ -3,6 +3,7 @@ import Link from "next/link";
 import dotenv from "dotenv";
 import { query } from "express";
 import Navbar from "@/app/components/Navbar";
+
 dotenv.config();
 
 const getProperty = async (slug) => {
@@ -105,6 +106,7 @@ const Property = async ({ params }) => {
           <p>Managing Broker: {property.managingBroker.name}</p>
           <p>Phonbe Number: {property.managingBroker.phoneNumber}</p>
           <br />
+
           <Link href={"/"}>
             <button>Back to Home Page</button>
           </Link>
