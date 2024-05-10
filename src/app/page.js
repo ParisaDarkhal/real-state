@@ -4,6 +4,7 @@ import Map from "./components/Map";
 import Card from "./components/Card";
 import "dotenv/config";
 import { query } from "express";
+import Grid from "./components/Grid";
 
 const getProperties = async () => {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_ENDPOINT;
@@ -44,12 +45,13 @@ const getProperties = async () => {
 const Home = async () => {
   const properties = await getProperties();
 
-  const locations = await properties.map((property) => property.location);
+  // const locations = await properties.map((property) => property.location);
   return (
     <>
       <Navbar />
-      <SearchBar />
-      <main>
+      <Grid properties={properties}/>
+      {/* <SearchBar /> */}
+      {/* <main>
         <article>
           <Map locations={locations} />
         </article>
@@ -68,7 +70,7 @@ const Home = async () => {
             ))}
           </div>
         </article>
-      </main>
+      </main> */}
     </>
   );
 };

@@ -7,12 +7,12 @@ dotenv.config();
 const Map = ({ locations }) => {
   const containerStyle = {
     width: "100%",
-    height: "90%",
+    height: "95%",
   };
 
   const center = {
-    lat: locations[2].latitude,
-    lng: locations[2].longitude,
+    lat: locations[0]?.latitude,
+    lng: locations[0]?.longitude,
   };
 
   const image =
