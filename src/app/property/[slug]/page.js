@@ -40,6 +40,7 @@ const getProperty = async (slug) => {
                 name,
                 phoneNumber
               }
+              
             }}`,
 
         variables: {

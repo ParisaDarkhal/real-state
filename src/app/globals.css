@@ -57,7 +57,6 @@ main {
 
 article {
   width: 50vw;
-  /* max-height: 420px; */
   height: 80vh;
   overflow-y: scroll;
 }
@@ -65,7 +64,7 @@ article {
 article.listings {
   box-shadow: rgba(60, 64, 67, 0.3) -2px 0 2px;
   padding: 10px;
-  max-height: 400px;
+  height: 85vh;
   overflow-y: scroll;
 }
 
