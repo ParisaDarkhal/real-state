@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real-State
 
-## Getting Started
+![Landing Page](./damo1.png)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Real-State** is a web application designed to help users find rental vacation houses. The application features an intuitive interface where users can search for properties using keywords and view available rentals on a map.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Landing Page**: The landing page displays a thumbnail picture of available properties along with their rental prices on the right side. On the left side, a map (using Google Maps API) shows the locations of the available properties.
+- **Search Bar**: Users can search for properties using keywords. Relevant properties are filtered and displayed on the right side.
+- **Property Details**: Clicking on a property displays a detailed page with all the information about the property.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies
 
-## Learn More
+- **Framework**: Next.js
+- **Maps API**: Google Maps API
 
-To learn more about Next.js, take a look at the following resources:
+## Components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Landing Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The landing page consists of two main components:
 
-## Deploy on Vercel
+1. **Property Thumbnails**: Displays thumbnail images of available properties along with their rental prices.
+2. **Map**: Displays a map with the available properties flagged on it.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Above the map, there is a search bar for filtering properties based on keywords.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Property Details Page
+
+When a user clicks on a property, they are directed to a detailed page with comprehensive information about the property.
+
+![Property Details Page](./demo2.png)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/parisadarkhal/real-state.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd real-state
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Set up your Google Maps API key. Create a `.env.local` file in the root directory and add your API key:
+   ```env
+   NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+   ```
+5. Run the development server:
+   ```bash
+   npm run dev
+   ```
+6. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Usage
+
+- **Search Properties**: Use the search bar to find properties by entering keywords.
+- **View Map**: See the flagged properties on the map.
+- **View Details**: Click on any property thumbnail to view detailed information.
+
+## Contributing
+
+We welcome contributions! Please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+Feel free to reach out for any questions or support.
+
+Happy property hunting!
